@@ -8,8 +8,6 @@ const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')
 const MongoStore = require("connect-mongo")
-// const parseArgs = require('minimist')
-// const { fork } = require('child_process')
 
 const advancedOptions = {
     useNewUrlParser: true,
@@ -108,82 +106,6 @@ app.get('/info', async (req, res) => {
     const memoriaReservada = util.inspect(process.memoryUsage().rss)
     res.render('process/info',{directorio,ruta,procesoId,nombrePlataforma,versionNode,argumentoEntrada,memoriaReservada})
 })
-
-// app.get('/api/random', (req,res) => {
-//     const numerosAleatorios = []
-//     const cantidad = req.query.count
-//     const child = fork('./src/forkNumeroAleatorio.js')
-//     child.send(cantidad || 0)
-//     child.on('message', (numeros) => {
-//         var repetidos = {};
-//         numeros.forEach((numero) =>{
-//         repetidos[numero] = (repetidos[numero] || 0) + 1;
-//         });
-//         res.status(200).json({NumerosAleatorios: numeros, CantidadNumeroRepetidos: repetidos})
-//     })
-// })
-
-// const numeros = () => {
-//     const MAX = 50
-//     const MIN = 1
-//     return Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
-// }
-
-// const http = require('http')
-
-// const server = http.createServer()
-// server.on('request', (req, res) => {
-//     let { url } = req
-//     const cantidad = req.query.count
-//     if(url === '/api/random/:cantidad'){
-//         const numerosAleatorios = []
-        
-//         if(cantidad){
-//             for(let i=0; i< cantidad; i++){
-//                 const numeroAleatorio = numeros()
-//                 numerosAleatorios.push(numeroAleatorio)
-//             }
-//         }else {
-//             for(let i=0; i< 999.999; i++){
-//                 const numeroAleatorio = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
-//                 numerosAleatorios.push(numeroAleatorio)
-//             }
-//         }
-//         var repetidos = {};
-
-//         numerosAleatorios.forEach((numero) =>{
-//         repetidos[numero] = (repetidos[numero] || 0) + 1;
-//         });
-        
-//         res.status(200).json({numerosAleatorios: numerosAleatorios, numeroRepetidos: repetidos})
-//     }
-// })
-
-// app.get('/api/random', (req,res) => {
-//     const numerosAleatorios = []
-//     const cantidad = req.query.count
-//     const MAX = 50
-//     const MIN = 1
-//     if(cantidad){
-//         for(let i=0; i< cantidad; i++){
-//             const numeroAleatorio = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
-//             numerosAleatorios.push(numeroAleatorio)
-//         }
-//     }else {
-//         for(let i=0; i< 999.999; i++){
-//             const numeroAleatorio = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
-//             numerosAleatorios.push(numeroAleatorio)
-//         }
-//     }
-
-//     var repetidos = {};
-
-//     numerosAleatorios.forEach((numero) =>{
-//     repetidos[numero] = (repetidos[numero] || 0) + 1;
-//     });
-    
-//     res.status(200).json({numerosAleatorios: numerosAleatorios, numeroRepetidos: repetidos})
-// })
 
 // Rutas
 app.use(require('./routes/index.routes'))
