@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/"><strong>Ecom<span>merce</span></strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav container-fluid d-flex justify-content-start pt-1">
+                <li class="nav-item">
+                    <a class="nav-link" href="/info">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/random">Random</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav container-fluid d-flex justify-content-end">
+                {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/usuario/salir">Salir</a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/usuario/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/usuario/registro">Registro</a>
+                </li>
+                {{/if}}
+            </ul>
+            
+        </div>
+    </div>
+</nav>

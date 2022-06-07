@@ -1,0 +1,19 @@
+ {{>messagesSuccess}}
+<div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>Login</h4>
+            </div>
+            <div class="card-body">
+                <form action="/usuario/login" method="POST">
+                    <input class="form-control form-control-sm mb-2" type="email" placeholder="Email" aria-label=".form-control-lg example" name="email" id="email">
+                    <input class="form-control form-control-sm mb-2" type="password" placeholder="Password" aria-label=".form-control-lg example" name="password" id="password">
+                    <div class="d-grid gap-2">
+                        <button class="form-control btn btn-outline-dark mb-2" type="submit">Iniciar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

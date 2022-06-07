@@ -1,0 +1,20 @@
+<div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>Nuevo Usuario</h4>
+            </div>
+            <div class="card-body">
+                <form action="/usuario/registro" method="POST">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Nombre" aria-label=".form-control-lg example" name="nombre" id="nombre" value="{{nombre}}">
+                    <input class="form-control form-control-sm mb-2" type="email" placeholder="Email" aria-label=".form-control-lg example" name="email" id="email" value="{{email}}">
+                    <input class="form-control form-control-sm mb-2" type="password" placeholder="Password" aria-label=".form-control-lg example" name="password" id="password" value="{{password}}">
+                    <input class="form-control form-control-sm mb-2" type="password" placeholder="Confirmar Password" aria-label=".form-control-lg example" name="confirmPassword" id="confirmPassword" value="{{confirmPassword}}">
+                    <div class="d-grid gap-2">
+                        <button class="form-control btn btn-outline-dark mb-2" type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

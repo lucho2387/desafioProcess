@@ -1,0 +1,52 @@
+span {
+    color: red;
+    font-weight: 600;
+}
+
+strong {
+    color: rgba(182, 167, 167, 0.603);
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.card {
+    width: 100%;
+    height: 250px;
+}
+
+.caja {
+    margin-top: 20px;
+    height: 450px;
+}
+
+.precio {
+    margin-top: 35px;
+}
+
+.stock {
+    color: red;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerNuevoProducto {
+    padding: 30px;
+}
+
+.containerMensaje {
+    padding: 30px;
+}

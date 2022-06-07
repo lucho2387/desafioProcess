@@ -1,0 +1,23 @@
+<div class="col-md-4 mx-auto">
+    <div class="card caja">
+        <div class="card-header text-center">
+            <h4>Actualizar Producto</h4>
+        </div>
+        <div class="card-body">
+            <form action="/{{producto._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="container mt-5">   
+                    <input class="form-control form-control-sm mb-2" type="text" aria-label=".form-control-lg example" name="nombre" id="nombre" value="{{producto.nombre}}">
+                    <textarea class="form-control form-control-sm mb-2" type="text" aria-label=".form-control-lg example" name="descripcion" id="descripcion">{{producto.descripcion}}</textarea>
+                    <input class="form-control form-control-sm mb-2" type="text" aria-label=".form-control-lg example" name="codigo" id="codigo" value="{{producto.codigo}}">
+                    <input class="form-control form-control-sm mb-2" type="text" aria-label=".form-control-lg example" name="imagen" id="imagen" value="{{producto.imagen}}">
+                    <input class="form-control form-control-sm mb-2" type="text" aria-label=".form-control-lg example" name="precio" id="precio" value="{{producto.precio}}">
+                    <input class="form-control form-control-sm mb-2" type="text" aria-label=".form-control-lg example" name="stock" id="stock" value="{{producto.stock}}">
+                    <div class="d-grid gap-2">
+                        <button class="form-control btn btn-outline-dark mb-2" type="submit">Actualizar</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </div>
+</div>

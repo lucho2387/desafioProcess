@@ -1,0 +1,34 @@
+
+    <div class="containerNuevoProducto d-flex justify-content-end align-items-center">
+      <a href="/producto">
+        <button class="botonNuevo btn btn-outline-dark">
+            Nuevo Producto
+        </button>
+      </a>
+    </div>
+    {{#if usuario}}
+        <div class="container col-md-4 text-center">
+          <h3>Bienvenido <span>{{usuario.nombre}}</span></h3>
+          <h4><span>{{usuario.email}}</span></h4>
+        </div>
+    {{/if}}
+    {{>messagesSuccess}}
+    {{#each productos}}
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="card d-flex m-4">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        {{nombre}} <a href="/{{_id}}"><i class="fa-solid fa-pencil"></i></a>
+                    </h4>
+                    <p class="precio"><strong>Precio:</strong> {{precio}}</p>
+                    <p class="stock"><strong>Stock:</strong> {{stock}}</p>
+                    <form action="/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="form-control btn btn-outline-dark mb-2" type="submit">
+                          Eliminar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {{/each}}
